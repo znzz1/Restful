@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;550;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+
+		<div id="formTxt">
+			<h1>Weather Search</h1>
+			<p>Fill out the form to get weather info !</p>
+		</div>
+
+		<form id="weatherRequestForm" action="/weather" method="GET">
+
+			<div id="streetContainer">
+				<label for="street">Street<span class="required">*</span></label>
+				<input type="text" id="street" name="street" required>
+			</div>
+
+			<div class="groupContainer">
+				<div class="inputContainer">
+					<label for="city">City<span class="required"> *</span></label>
+					<input type="text" id="city" name="city" required>
+				</div>
+
+				<div class="inputContainer">
+					<label for="state">State<span class="required"> *</span></label>
+					<select id="state" name="state" required>
+						<option value="" disabled selected>Select your state</option>
+						<option value="Alabama">Alabama</option>
+						<option value="Alaska">Alaska</option>
+						<option value="Arizona">Arizona</option>
+						<option value="Arkansas">Arkansas</option>
+						<option value="California">California</option>
+						<option value="Colorado">Colorado</option>
+						<option value="Connecticut">Connecticut</option>
+						<option value="Delaware">Delaware</option>
+						<option value="District Of Columbia">District Of Columbia</option>
+						<option value="Florida">Florida</option>
+						<option value="Georgia">Georgia</option>
+						<option value="Hawaii">Hawaii</option>
+						<option value="Idaho">Idaho</option>
+						<option value="Illinois">Illinois</option>
+						<option value="Indiana">Indiana</option>
+						<option value="Iowa">Iowa</option>
+						<option value="Kansas">Kansas</option>
+						<option value="Kentucky">Kentucky</option>
+						<option value="Louisiana">Louisiana</option>
+						<option value="Maine">Maine</option>
+						<option value="Maryland">Maryland</option>
+						<option value="Massachusetts">Massachusetts</option>
+						<option value="Michigan">Michigan</option>
+						<option value="Minnesota">Minnesota</option>
+						<option value="Mississippi">Mississippi</option>
+						<option value="Missouri">Missouri</option>
+						<option value="Montana">Montana</option>
+						<option value="Nebraska">Nebraska</option>
+						<option value="Nevada">Nevada</option>
+						<option value="New Hampshire">New Hampshire</option>
+						<option value="New Jersey">New Jersey</option>
+						<option value="New Mexico">New Mexico</option>
+						<option value="New York">New York</option>
+						<option value="North Carolina">North Carolina</option>
+						<option value="North Dakota">North Dakota</option>
+						<option value="Ohio">Ohio</option>
+						<option value="Oklahoma">Oklahoma</option>
+						<option value="Oregon">Oregon</option>
+						<option value="Pennsylvania">Pennsylvania</option>
+						<option value="Rhode Island">Rhode Island</option>
+						<option value="South Carolina">South Carolina</option>
+						<option value="South Dakota">South Dakota</option>
+						<option value="Tennessee">Tennessee</option>
+						<option value="Texas">Texas</option>
+						<option value="Utah">Utah</option>
+						<option value="Vermont">Vermont</option>
+						<option value="Virginia">Virginia</option>
+						<option value="Washington">Washington</option>
+						<option value="West Virginia">West Virginia</option>
+						<option value="Wisconsin">Wisconsin</option>
+						<option value="Wyoming">Wyoming</option>
+					</select>
+				</div>
+			</div>
+			
+			<hr>
+
+			<div id="autoContainer">
+				<label for="auto_detect">Want us to auto-detect your location? Check here</label>
+				<input type="checkbox" id="auto_detect" name="auto_detect">
+			</div>
+
+			<div id="bottonContainer">
+				<button type="submit" id="submitBtn">SUBMIT</button>
+				<button type="reset" id="resetBtn">CLEAR</button>
+			</div>
+
+		</form>
+	</div>
+
+	<div class="container" id="noRecordContainer" style="display: none;">
+		<div id = "d1">
+			<p> No records have been found.</p>
+		</div>
+	</div>
+
+	<div class="container" id="weatherCardContainer"></div>
+	<div class="container" id="weatherTableContainer"></div>
+	<div class="container" id="detailedWeatherContainer"></div>
+	<div class="container" id="chartsContainer" style="display: none;">
+		<div id="chart1"></div>
+		<div id="chart2"></div>
+	</div>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/arearange.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/windbarb.js"></script>
+	<script src="/static/js/scripts.js"></script>
+</body>
+</html>
