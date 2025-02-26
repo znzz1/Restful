@@ -5,8 +5,8 @@ import requests
 
 app = Flask(__name__)
 
-WEATHER_API_KEY = 'vO5nAe4x0yOoiH1nW5bZgNxbP1p30B9V'
-GEOCODING_API_KEY = 'AIzaSyB61St_Fi80ickyVz4vXFH9XO5CrFY199w'
+WEATHER_API_KEY = ''
+GEOCODING_API_KEY = ''
 
 weather_code_mapping = {
     1000: "Clear",
